@@ -35,7 +35,65 @@ function mostrar(response) {
   //arr[12] = totales.
   //arr[11] = ocupados.
   disponible = parseInt(arr[12])-parseInt(arr[11]);
-  out+= '<div class="mt-5"></div>'+
+
+  /*
+    Aquí se hará la verificación para que se pongan los lugares disponibles
+    en base al color.
+  */
+  var color_avaliable;
+  switch (parseInt(color)) {
+    case 1:
+      color_avaliable = '<p style="color: green;">'+disponible+'</p>';
+      break;
+    case 2:
+      color_avaliable = '<p style="color: yellow;">'+disponible+'</p>';
+      break;
+    case 3:
+      color_avaliable = '<p style="color: red;">'+disponible+'</p>';
+      break;
+  }
+
+  out += '<div class="wrap">' +
+            '<div class="tarjeta-wrap">' +
+              '<div class="tarjeta">' +
+                '<div class="adelante">' +
+                  '<h1 class="display-4 centrado">'+ arr[2] +'</h1>'+'<hr>'+
+                  '<h1 class="display-5">Lugares disponibles: '+color_avaliable+'</h1>'+
+                '</div>' +
+                '<div class="atras">' +
+                  '<h1 class="display-4 centrado">Más información</h1>' +
+                  '<p class="display-5 centrado"><img src="img/ubicacion.png" width="40" height="40"> Dirección: ' + arr[3] + '</p>' +
+                  '<p class="display-5 centrado"><img src="img/horario.png" width="40" height="40"> Horario: ' + arr[8] + '</p>' +
+                  '<p class="display-5 centrado"><img src="img/hora.png" width="40" height="40"> Precio: ' + arr[9] + ' Hr/Fracción</p>' +
+                  '<p class="display-5 centrado"><img src="img/telefono.png" width="40" height="40"> Teléfono: ' + arr[6] + '</p>' +
+                  '<p class="display-5 centrado">Notas: ' + arr[7] + '</p>' +
+                '</div>' +
+              '</div>' +
+            '</div>' +
+          '</div>';
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  /*out+= '<div class="mt-5"></div>'+
   	'<div class="container">'+
   		'<div class="row">'+
         	'<div class="col-md-12 centrar">'+
@@ -64,6 +122,6 @@ function mostrar(response) {
         		'</div>'+
         	'</div>'+
         '</div>'+
-    '</div>';
+    '</div>';*/
  document.getElementById("info").innerHTML = out;
 }

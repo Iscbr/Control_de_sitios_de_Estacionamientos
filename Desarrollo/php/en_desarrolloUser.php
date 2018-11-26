@@ -12,20 +12,13 @@
     <!-- GOOGLE FONTS (ROBOTO) -->
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
     <!-- CUSTOM CSS -->
-    <link rel="stylesheet" href="css/style.css">
-    <!-- PARKING SCRIPT -->
-    <script type="text/javascript" src="scripts/parking.js"></script>
-    <!-- GMAPS PARKING LOCATION SCRIPT -->
-    <script type="text/javascript" src="scripts/gMapsParking.js"></script>
+    <link rel="stylesheet" href="../css/style.css">
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 	  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
   </head>
-
-
-
 
   <!-- BODY  -->
   <body>
@@ -34,8 +27,8 @@
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top color-nav">
       <div class="container">
 
-        <a class="navbar-brand" href="./index.php">
-          <img src="img/logo.png" width="35" height="35" class="d-inline-block align-top" alt="Inicio">
+        <a class="navbar-brand" href="../index.php">
+          <img src="../img/logo.png" width="35" height="35" class="d-inline-block align-top" alt="Inicio">
             F-Parking
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -53,7 +46,7 @@
             </form>
 
             <li class="nav-item active">
-              <a class="nav-link" action href="index_user.html">
+              <a class="nav-link" action href="../index.php">
                 <button type="button" class="btn btn-outline-light">
                   <span class="glyphicon glyphicon-home"></span> Inicio
                 </button>
@@ -61,15 +54,7 @@
             </li>
 
             <li class="nav-item active">
-              <a class="nav-link" action href="php/en_desarrolloUserLog.php">
-                <button type="button" class="btn btn-outline-light">
-                  <span class="glyphicon glyphicon-user"></span> Perfil
-                </button>
-              </a>
-            </li>
-
-            <li class="nav-item active">
-              <a class="nav-link" action href="php/en_desarrolloUserLog.php">
+              <a class="nav-link" action href="en_desarrolloUser.php">
                 <button type="button" class="btn btn-outline-light">
                   <span class="glyphicon glyphicon-info-sign"></span> Ayuda
                 </button>
@@ -77,7 +62,7 @@
             </li>
 
             <li class="nav-item active">
-              <a class="nav-link" action href="php/en_desarrolloUserLog.php">
+              <a class="nav-link" action href="en_desarrolloUser.php">
                 <button type="button" class="btn btn-outline-light">
                   <span class="glyphicon glyphicon-question-sign"></span> About
                 </button>
@@ -85,9 +70,17 @@
             </li>
 
             <li class="nav-item active">
-              <a class="nav-link" action href="php/cerrar.php">
+              <a class="nav-link" action href="registrate.php">
                 <button type="button" class="btn btn-outline-light">
-                  <span class="glyphicon glyphicon-log-out"></span> Salir
+                  <span class="glyphicon glyphicon-list"></span> Registrarse
+                </button>
+              </a>
+            </li>
+
+            <li class="nav-item active">
+              <a class="nav-link" action href="login.php">
+                <button type="button" class="btn btn-outline-light">
+                  <span class="glyphicon glyphicon-log-in"></span> Entrar
                 </button>
               </a>
             </li>
@@ -97,32 +90,15 @@
       </div>
     </nav>
 
-    <div class="container mt-4"></div>
     <div class="container">
       <div class="row">
-        <div class="col-md-12 centrar">
-          <h1 class="mt-5">Bienvenido a F-Parking, Nombre Usuario</h1>
+
+        <div class="col-md-12">
+          <h1 class="display-1" style="text-align: center;">¡En desarrollo!</h1>
         </div>
-      </div>
-
-      <!-- GOOGLE MAPS -->
-      <div class="row">
-
-
-        <div id="map" class="col-md-12 my-2" style="width: 100%;height: 500px;"></div>
-
-        <script async defer
-          src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDy1Lgx05CgWi-PxUgU2iw4P1pvaIWqL1Y&callback=initMap">
-        </script>
-
-        <!-- GOOGLE MAPS SCRIPT -->
-        <script type="text/javascript" src="scripts/main.js"></script>
 
       </div>
-      <!-- FIN GOOGLE MAPS -->
-
+    </div>
 
   </body>
-
-
 </html>

@@ -6,7 +6,7 @@
     <div class="container">
       <div class="row">
         <div class="col-md-12 centrar">
-          <h1 class="mt-5">Bienvenido a este sitio de estacionamientos.</h1>
+          <h1 class="mt-5">Bienvenido a F-Parking.</h1>
         </div>
       </div>
 

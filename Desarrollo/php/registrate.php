@@ -23,7 +23,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') { // si el metodo de envio es igual a 
       $errores .= '<li>Por favor rellena todos los datos correctamente</li>';
   }else {
     try {
-      $conexion = new PDO('mysql:host=localhost;dbname=control_de_sitios_de_estacionamientos', 'root', '');
+      $conexion = new PDO('mysql:host=sql173.main-hosting.eu;dbname=u450515599_pking', 'u450515599_pking', 'Equipo1-fparking');
     } catch (PDOException $e) {
       echo "Error: " . $e->getMessage();
     }

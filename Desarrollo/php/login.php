@@ -13,13 +13,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 	$password = hash('sha512', $password);
   try {
 
-    	  $conexion = new PDO('mysql:host=localhost;dbname=control_de_sitios_de_estacionamientos', 'root', '');
+    	  $conexion = new PDO('mysql:host=sql173.main-hosting.eu;dbname=u450515599_pking', 'u450515599_pking', 'Equipo1-fparking');
 
   } catch (PDOException $e) {
       echo "Error:" . $e->getMessage();;
   }
   $statement = $conexion->prepare('
-		SELECT usuario_tipo FROM usuarios WHERE correo = :correo AND contrasena = :password'
+		SELECT usuario_tipo,id_usuarios FROM usuarios WHERE correo = :correo AND contrasena = :password'
 	);
 	$statement->execute(array(
 		':correo' => $correo,
@@ -27,13 +27,22 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 	));
 	$resultado = $statement->fetch();
 	if ($resultado !== false) {
-if($resultado['usuario_tipo']==1){
-			$_SESSION['usuario']=$correo;
-	header('Location: ../index_user.html');
-}else{
+		if($resultado['usuario_tipo']==1){
+					$_SESSION['usuario']=$correo;
+			header('Location: ../index_user.html');
+		}else{
 			$_SESSION['admin']=$correo;
-	header('Location: ../index_admin.html');
-}
+			$id=$resultado['id_usuarios'];
+			$statement = $conexion->prepare('
+				SELECT id_estacionamiento FROM estacionamientos WHERE usuario_id = :id'
+			);
+			$statement->execute(array(
+				':id' => $id
+			));
+			$resultado = $statement->fetch();
+			$id_estacionamiento=$resultado['id_estacionamiento'];
+			header("Location: ../index_admin.php?idEst=$id_estacionamiento");
+		}
 	} else {
 		$errores .= '<li>Datos Incorrectos</li>';
 	}

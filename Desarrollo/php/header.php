@@ -3,7 +3,7 @@
 
   <head>
     <meta charset="utf-8">
-    <title>Control de sitios de Estacionamiento</title>
+    <title>F-Parking</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -13,11 +13,14 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
     <!-- CUSTOM CSS -->
     <link rel="stylesheet" href="css/style.css">
-    
     <!-- PARKING SCRIPT -->
     <script type="text/javascript" src="scripts/parking.js"></script>
     <!-- GMAPS PARKING LOCATION SCRIPT -->
     <script type="text/javascript" src="scripts/gMapsParking.js"></script>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
   </head>
 
@@ -27,6 +30,7 @@
     <!-- NAVIGATION -->
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top color-nav">
       <div class="container">
+
         <a class="navbar-brand" href="./index.php">
           <img src="img/logo.png" width="35" height="35" class="d-inline-block align-top" alt="Inicio">
             F-Parking
@@ -35,31 +39,57 @@
           <span class="navbar-toggler-icon"></span>
         </button>
 
+
         <div class="collapse navbar-collapse" id="navbarNav">
-
-          <form class="form-inline my-2 my-lg-0 ml-auto">
-            <input class="form-control mr-sm-2" type="search" placeholder="Ingrese su búsqueda" aria-label="Search">
-            <button class="btn btn-success my-2 my-sm-0" type="submit">Buscar</button>
-          </form>
-
           <!-- ml-auto -> MarginLeft-auto -->
-          <ul class="navbar-nav ml-auto">
+          <ul class="navbar-nav navbar-right">
+
+            <form class="form-inline">
+              <input class="form-control mr-sm-2" type="search" placeholder="Ingrese su búsqueda" aria-label="Search">
+              <button class="btn btn-success" type="submit">Buscar</button>
+            </form>
+
             <li class="nav-item active">
-              <a class="nav-link" href="index.php">Inicio</a>
+              <a class="nav-link" action href="index.php">
+                <button type="button" class="btn btn-outline-light">
+                  <span class="glyphicon glyphicon-home"></span> Inicio
+                </button>
+              </a>
             </li>
+
             <li class="nav-item active">
-              <a class="nav-link" href="#">Ayuda</a>
+              <a class="nav-link" action href="php/en_desarrolloUser.php">
+                <button type="button" class="btn btn-outline-light">
+                  <span class="glyphicon glyphicon-info-sign"></span> Ayuda
+                </button>
+              </a>
             </li>
+
             <li class="nav-item active">
-              <a class="nav-link" href="#">About</a>
+              <a class="nav-link" action href="php/en_desarrolloUser.php">
+                <button type="button" class="btn btn-outline-light">
+                  <span class="glyphicon glyphicon-question-sign"></span> About
+                </button>
+              </a>
             </li>
+
             <li class="nav-item active">
-              <a class="nav-link" href="php/registrate.php">Registrarse</a>
+              <a class="nav-link" action href="php/registrate.php">
+                <button type="button" class="btn btn-outline-light">
+                  <span class="glyphicon glyphicon-list"></span> Registrarse
+                </button>
+              </a>
             </li>
+
             <li class="nav-item active">
-              <a class="nav-link" href="php/login.php">Entrar</a>
+              <a class="nav-link" action href="php/login.php">
+                <button type="button" class="btn btn-outline-light">
+                  <span class="glyphicon glyphicon-log-in"></span> Entrar
+                </button>
+              </a>
             </li>
           </ul>
         </div>
+
       </div>
     </nav>

@@ -8,7 +8,7 @@ header("Access-Control-Allow-Origin: *");
 header("Content-Type: application/json; charset=UTF-8");
 //header("Content-Type: /opt/lampp/htdocs/Proyects I+D1/Control_de_sitios_de_Estacionamientos/Desarrollo/scripts/main.js; charset=UTF-8");
 
-$conn = new mysqli("localhost", "root", "", "control_de_sitios_de_estacionamientos");
+$conn = new mysqli("sql173.main-hosting.eu", "u450515599_pking", "Equipo1-fparking", "u450515599_pking");
 
 //Esta función corrige el problema de los acentos.
 mysqli_query ($conn,"SET NAMES 'utf8'");
